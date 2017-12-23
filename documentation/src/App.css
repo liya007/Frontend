@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  
+ 
+  height: 50px;
+}
+.first{
+
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.second{
+  display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    box-sizing: inherit;
+}
+
+.logo{
+  text-align: left;
+  height: 70px;
+  width:40%;
+}
+.aa{
+  display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 10px;
+    height: 100%;
+    align-items: center;
+    
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+}
+
+
+
+a{
+  text-decoration: none ; 
+  color: white;
+  /*-webkit-text-fill-color: white;*/
+}
+
+.invisible{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  width: 80%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+}
+
+.entry{
+
+  
+    height: 100%;
+    text-align: right;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 10px;
+  
+    align-items: center;
+   
+  
+}
+
+.span1 {
+  padding-left: 20px;
+ 
+  text-decoration-color: inherit;
+  font-size: 30px;
+}
+
+
+.span2 {
+ 
+  color: black;
+ 
+}
+
+.App-header {
+  height: 70px;
+  width: 100%;
+
+  text-align: left;
+  background-color: #222;
+
+  padding: 0px;
+  color: white;
+}
+
+p{
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+}
+
+.App-footer{
+  background-color: #222;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  color: white;
+  position:  fixed;
+  left:0;
+  bottom: 0;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mainBody
+{
+  height: 450px;
+  width: 100%;
+
+}
+
+.partOfBody{
+  float: left;
+  height: 450px;
+  width: 33%;
+  text-align: center;
+
+  font-size: 3vw; 
+}
+
+.third{
+  height: 500px;
+  width: inherit;
+  text-decoration-color: black;
+  display: table-cell;
+  vertical-align: middle;
+ 
+}
+.Link{
+color : black;
+}
