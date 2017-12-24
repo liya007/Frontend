@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './Logo2.bmp';
 import './App.css';
+import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
 
 class MyHeader extends React.Component{
 
@@ -17,9 +18,9 @@ class MyHeader extends React.Component{
             <div className = "invisible"></div>
            
            <div className = "entry">  {/* выделить в компоненту*/}
-           <a  href="./choosing">
+           <Link to="./choosing">
               <span>Вход</span>
-              </a>  
+              </Link>  
            </div>
                  
             </div>

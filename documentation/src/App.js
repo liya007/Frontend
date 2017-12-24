@@ -8,7 +8,8 @@ import Home from './Home';
 
 import { BrowserRouter as Router,
   Route,
-  Link} from 'react-router-dom';
+  Link,
+  Switch} from 'react-router-dom';
 
 
 import './App.css';
@@ -27,9 +28,6 @@ class App extends Component {
        <Route path="/choosing" component={ChoosingActivity}/>
        <Route path="/" component={MyFooter}/>
        </div>
-
-
-
      </Router>
 
     );
