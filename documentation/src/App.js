@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
-import MyHeader from './MyHeader';
-import MainPage from './mainPage';
-import ChoosingActivity from './ChoosingActivity';
-import MyFooter from './MyFooter';
-import Home from './Home';
+import MyHeader from './Components/MyHeader';
+import MainPage from './Components/mainPage';
+import ChoosingActivity from './Components/ChoosingActivity';
+import MyFooter from './Components/MyFooter';
+import Home from './Components/Home';
 
 import { BrowserRouter as Router,
   Route,
   Link,
   Switch} from 'react-router-dom';
 
-
 import './App.css';
-import mainPage from './mainPage';
 
 class App extends Component {
 
@@ -24,7 +22,7 @@ class App extends Component {
        <div>
 
        <Route path="/" component={MyHeader}/>
-       <Route exact path="/" component={mainPage}/>
+       <Route exact path="/" component={MainPage}/>
        <Route path="/choosing" component={ChoosingActivity}/>
        <Route path="/" component={MyFooter}/>
        </div>

@@ -5,7 +5,7 @@ import MainPage from './mainPage';
 import ChoosingActivity from './ChoosingActivity';
 
 
-import './App.css';
+import '../App.css';
 
 class Home extends React.Component{
     render (){
