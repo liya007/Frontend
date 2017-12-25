@@ -33,32 +33,45 @@ export default class  ChoosingActivity extends React.Component{
     constructor (props){
         super (props);
         this.state ={
-            stateOfRadiobutton : false
+            stateOfRadiobutton1 : false,
+            stateOfRadiobutton2 : false,
+            stateOfRadiobutton3 : false
         };
     }
 
     render(){
+        return(
+            <div>
+                <form>
+                <p><b>Выберете действие: </b></p>
+                <p><input  name = "choosing" type = "radio" value = "load" /> {this.setState.stateOfRadiobutton1 = true}Добавить новый документ</p>
+                <p><input  name = "choosing" type = "radio" value = "edit"/>{this.setState.stateOfRadiobutton2 = true}Редактироват существующий документ</p>
+                <p><input  name = "choosing" type = "radio" value = "delete"/>{this.setState.stateOfRadiobutton3 = true}Удалить существующий документ</p>
+                </form>
 
+                { this.stateOfRadiobutton1
+                ? <span>Rendered when `truthy`</span>
+                : <span>Rendered when `falsey`</span>
+                }
+
+            </div>
+         
+        );
+
+        if(this.state.stateOfRadiobutton===true)
+        {
+           return(<p>Loading</p>);
+        }
+        else
+        {
             if(this.state.value==='load')
             {
-                
-                if(this.state.value==='edit')
-                {
-                    
-                }
-                else
-                {
-
-                }
+                <p>Loading</p>
             }
-        return(
-            <form>
-            <p><b>Выберете действие: </b></p>
-            <p><input  name = "choosing" type = "radio" value = "load" /></p>
-            <p><input  name = "choosing" type = "radio" value = "edit"/>Редактироват существующий документ</p>
-            <p><input  name = "choosing" type = "radio" value = "delete"/>Удалить существующий документ</p>
-        </form>
-        );
+            else{
+                <p>Deleting</p>
+            }
+        }
     }
 
 }
