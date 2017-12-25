@@ -3,7 +3,7 @@ import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
 
 
 
-const ChoosingActivity = ({match}) =>(
+/*const ChoosingActivity = ({match}) =>(
     <div>
         <h1>ChoosingActivity</h1>
         <ul>
@@ -27,11 +27,47 @@ const ChoosingActivity = ({match}) =>(
     )}/>
 
     </div>
-)
+)*/
+
+export default class  ChoosingActivity extends React.Component{
+    constructor (props){
+        super (props);
+        this.state ={
+            stateOfRadiobutton : false
+        };
+    }
+
+    render(){
+
+            if(this.state.value==='load')
+            {
+                
+                if(this.state.value==='edit')
+                {
+                    
+                }
+                else
+                {
+
+                }
+            }
+        return(
+            <form>
+            <p><b>Выберете действие: </b></p>
+            <p><input  name = "choosing" type = "radio" value = "load" /></p>
+            <p><input  name = "choosing" type = "radio" value = "edit"/>Редактироват существующий документ</p>
+            <p><input  name = "choosing" type = "radio" value = "delete"/>Удалить существующий документ</p>
+        </form>
+        );
+    }
+
+}
+    
+
+
 
 const Activity = ({ match }) => (
     <div>
       <h3>{match.params.topicId}</h3>
     </div>
   )
-export default ChoosingActivity;
