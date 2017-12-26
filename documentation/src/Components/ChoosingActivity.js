@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
+import './Choosing.css';
 
 
 
@@ -32,55 +33,75 @@ import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
 export default class  ChoosingActivity extends React.Component{
     constructor (props){
         super (props);
-        this.state ={
-            stateOfRadiobutton1 : false,
-            stateOfRadiobutton2 : false,
-            stateOfRadiobutton3 : false
-        };
+        this.ChoosenL = this.ChoosenL.bind(this);
+        this.ChoosenE = this.ChoosenE.bind(this);
+        this.ChoosenD = this.ChoosenD.bind(this);
+           
+        this.state ={radioButton: 'nothing'}
     }
 
+    ChoosenL (){
+        this.setState({radioButton: 'L'});
+    }
+
+    ChoosenE (){
+        this.setState({radioButton: 'E'});
+    }
+
+    ChoosenD (){
+        this.setState({radioButton: 'D'});
+    }
+
+
+
     render(){
-        return(
-            <div>
-                <form>
-                <p><b>Выберете действие: </b></p>
-                <p><input  name = "choosing" type = "radio" value = "load" /> {this.setState.stateOfRadiobutton1 = true}Добавить новый документ</p>
-                <p><input  name = "choosing" type = "radio" value = "edit"/>{this.setState.stateOfRadiobutton2 = true}Редактироват существующий документ</p>
-                <p><input  name = "choosing" type = "radio" value = "delete"/>{this.setState.stateOfRadiobutton3 = true}Удалить существующий документ</p>
-                </form>
 
-                { this.stateOfRadiobutton1
-                ? <span>Rendered when `truthy`</span>
-                : <span>Rendered when `falsey`</span>
+        let p = null;
+        if (this.state.radioButton == 'L'){
+            p = <p>The state is "Loading"</p>
+        }
+        else {
+            if (this.state.radioButton == 'E')
+            {
+                p = <p>the state is "Editing"</p>
+            }
+            else {
+                if (this.state.radioButton == 'D')
+                {
+                    p = <p>the state is "Deleting"</p>
                 }
+                else{
+                    p = <p>the state is "Bullshit"</p>
+                }
+            }
+      }
 
-            </div>
+        return(
+          <div>
+              <hr />
+                <div className = "choosing">
+                    <b>Выберите действие: </b>
+                    <form>
+                        <p><input type = "radio" name = "activity"  value = "Loading"
+                            onClick ={this.ChoosenL}/>Добавить</p>
+                        <p><input type = "radio" name = "activity" value = "Editing"
+                            onClick ={this.ChoosenE}/>Редактировать</p>
+                        <p><input type = "radio" name = "activity" value = "Deliting"
+                            onClick ={this.ChoosenD}/>Удалить</p>
+                    </form>
+                    {p} {/*подгружаемая компонента*/}
+                </div>
+           
+          </div>
+         
+          
          
         );
 
-        if(this.state.stateOfRadiobutton===true)
-        {
-           return(<p>Loading</p>);
-        }
-        else
-        {
-            if(this.state.value==='load')
-            {
-                <p>Loading</p>
-            }
-            else{
-                <p>Deleting</p>
-            }
-        }
+        
     }
 
 }
-    
 
 
 
-const Activity = ({ match }) => (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  )

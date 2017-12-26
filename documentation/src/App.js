@@ -5,6 +5,7 @@ import MainPage from './Components/mainPage';
 import ChoosingActivity from './Components/ChoosingActivity';
 import MyFooter from './Components/MyFooter';
 import Home from './Components/Home';
+import ChoosingDocument from './Components/ChoosingDocument';
 
 import { BrowserRouter as Router,
   Route,
@@ -23,7 +24,7 @@ class App extends Component {
 
        <Route path="/" component={MyHeader}/>
        <Route exact path="/" component={MainPage}/>
-       <Route path="/choosing" component={ChoosingActivity}/>
+       <Route path="/choosing" component={ChoosingDocument}/>
        <Route path="/" component={MyFooter}/>
        </div>
      </Router>
