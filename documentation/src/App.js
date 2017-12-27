@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 import MyHeader from './Components/MyHeader';
 import MainPage from './Components/mainPage';
-import ChoosingActivity from './Components/ChoosingActivity';
 import MyFooter from './Components/MyFooter';
-import Home from './Components/Home';
+import Titul from './Components/Student/Titul';
 import ChoosingDocument from './Components/ChoosingDocument';
 
 import { BrowserRouter as Router,
@@ -25,6 +24,10 @@ class App extends Component {
        <Route path="/" component={MyHeader}/>
        <Route exact path="/" component={MainPage}/>
        <Route path="/choosing" component={ChoosingDocument}/>
+       <Route path = "/titul" component= {Titul} />
+       <Route path = "/otchet" component= {Titul} />
+       {//<Route path = "/gost" component= {}/>
+       }
        <Route path="/" component={MyFooter}/>
        </div>
      </Router>
