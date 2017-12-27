@@ -1,34 +1,9 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
 import './Choosing.css';
+import ModalLoading from './ModalLoading';
 
 
-
-/*const ChoosingActivity = ({match}) =>(
-    <div>
-        <h1>ChoosingActivity</h1>
-        <ul>
-            <li><Link to = {`${match.url}/Loading`} className ="Link">
-                Go to "Loading"
-                </Link>
-            </li>
-            <li><Link to= {`${match.url}/Editing`} className ="Link">
-                Go to "Editing"
-                </Link>
-            </li>
-            <li><Link to= {`${match.url}/Deleting`} className ="Link">
-                Go to "Deleting"
-                </Link>
-            </li>
-        </ul>
-
-        <Route path={`${match.url}/:topicId`} component={Activity}/>
-        <Route exact path={match.url} render={() => (
-        <h3>Please select a topic.</h3>
-    )}/>
-
-    </div>
-)*/
 
 export default class  ChoosingActivity extends React.Component{
     constructor (props){
@@ -58,7 +33,7 @@ export default class  ChoosingActivity extends React.Component{
 
         let p = null;
         if (this.state.radioButton == 'L'){
-            p = <p>The state is "Loading"</p>
+            p = <ModalLoading/>
         }
         else {
             if (this.state.radioButton == 'E')
@@ -89,9 +64,9 @@ export default class  ChoosingActivity extends React.Component{
                         <p><input type = "radio" name = "activity" value = "Deliting"
                             onClick ={this.ChoosenD}/>Удалить</p>
                     </form>
-                    {p} {/*подгружаемая компонента*/}
+                   
                 </div>
-           
+                {p} {/*подгружаемая компонента*/}
           </div>
          
           
