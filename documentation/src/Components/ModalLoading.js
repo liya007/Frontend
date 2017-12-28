@@ -43,7 +43,7 @@ export default class ModalLoading extends React.Component{
     render(){
         return(
         <div>
-            <button onClick={this.openModal}>Перейти</button>
+            <button onClick={this.openModal}>Перейти к добавлению</button>
             <Modal
                 isOpen={this.state.modalIsOpen}
                 onAfterOpen={this.afterOpenModal}

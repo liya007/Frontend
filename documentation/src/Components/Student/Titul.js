@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Choosingrang from './ChoosingRang';
+import './style.css';
+import Rang from './Rang';
+
 class Titul extends Component
 {
     constructor (props){
@@ -13,10 +16,11 @@ class Titul extends Component
     render(){
         let component = null;
             if (this.state.selected===1){
-                component=<Choosingrang/>
+                component=<Rang/>
             }
     return(
         <div>
+             <div className = "choosing">
         <b>Выберите документ, с которым хотите работать: </b>
         <form>
             <p><input type = "radio" name = "document" value = "frontRages"
@@ -27,8 +31,11 @@ class Titul extends Component
                 onClick={this.newState}    />РГР</p>
             <hr width ="50%" align = "left"/>
         </form>
+        
+        </div>
         {component};
         </div>
+       
     );
 
 }
