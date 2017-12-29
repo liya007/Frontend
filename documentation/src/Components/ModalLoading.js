@@ -1,5 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
+import List from 'material-ui'; // ????????????????????????????????
+import {Grid, Row, Col} from 'react-bootstrap';
+
 
 const customStyles = {
     content : {
@@ -10,7 +13,9 @@ const customStyles = {
       marginRight           : '-50%',
       transform             : 'translate(-50%, -50%)'
     }
-  };
+};
+
+const dummySentences = ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'Donec hendrerit tempor tellus.', 'Donec pretium posuere tellus.', 'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'Nulla posuere.', 'Donec vitae dolor.', 'Nullam tristique diam non turpis.', 'Cras placerat accumsan nulla.', 'Nullam rutrum.', 'Nam vestibulum accumsan nisl.'];
 
 export default class ModalLoading extends React.Component{
 
@@ -54,7 +59,16 @@ export default class ModalLoading extends React.Component{
         
                 <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
                 <div>
-                   Содержание окна для загрузки документа
+                <Grid>
+                <Row className="show-grid1">
+                 <Col>1 строка, 1 колонка </Col>
+                 <Col>1 строка, 2 колонка </Col>
+                </Row>
+                <Row className="show-grid1">
+                <Col md={6} mdPush={6}><code>&lt;{'Col md={6} mdPush={6}'} /&gt;</code></Col>
+                <Col md={6} mdPull={6}><code>&lt;{'Col md={6} mdPull={6}'} /&gt;</code></Col>
+              </Row>
+              </Grid>
                 </div>
                 <button onClick={this.closeModal}>Отмена</button>
                 <button onClick={this.closeModal}>Загрузить</button>
