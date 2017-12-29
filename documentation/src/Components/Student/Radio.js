@@ -1,29 +1,9 @@
 import React, { Component } from 'react';
 import './style.css';
-import Rang from './Rang';
-import Radio from './Radio';
 
-class Titul extends Component
-{
-    constructor (props){
-        super(props);
-        this.newState=this.newState.bind(this);
-        this.state={selected : 0}
+function Radio (props){
 
-        
-    }
-
-    newState (){
-        this.setState({selected:1})
-    }
-    render(){
-        let component = null;
-            if (this.state.selected===1){
-                component=<Rang url = {this.props.match.path}/>
-            }
-    return(
-        <div>
-            <div className = "choosing">
+    <div className = "choosing">
     <b>Выберите документ, с которым хотите работать: </b>
         <form>
             <p><input type = "radio" name = "document" value = "frontRages"
@@ -36,11 +16,5 @@ class Titul extends Component
             </form>
             
     </div>
-        {component};
-        </div>
-       
-    );
-
 }
-}
-export default Titul;
+export default Radio;

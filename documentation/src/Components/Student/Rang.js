@@ -1,23 +1,24 @@
 
 import React, { Component } from 'react';
 import './style.css';
+import Button from './Button';
 
 class Rang extends Component{
     constructor (props){
         super(props);
         this.newState=this.newState.bind(this); //// ЧТО ЭТО ТАКОЕ И ПОЧЕМУ ОНО ТАК ДЕЛАЕТСЯ
         this.state={selected : 0}
+        this.state = {url : this.props.url}
     }
     newState (){
         this.setState({selected:1})
     }
     render(){
         let component = null;
-        if (this.state.selected==1){
-            component=<div><button>Заполнить</button> <button>Предварительный просмотр</button></div>
-        }
-        if (this.state.selected==1)//здесь доп условие для отчетов
-         {component=<div><button>Сохранить</button> <button>Предварительный просмотр</button></div>}
+        if (this.state.selected==1&&this.state.url=='/otchet')
+            component =<Button name={'Сохранить'} />
+        if (this.state.selected==1&&this.state.url=='/titul')
+        component =<Button name={'Заполнить'} />
         return(
            <div >
            <div className = "choosing">
@@ -33,7 +34,6 @@ class Rang extends Component{
 
             </form>
            </div>
-            
             {component};
             </div>
         );}
