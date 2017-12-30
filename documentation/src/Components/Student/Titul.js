@@ -3,7 +3,6 @@ import './style.css';
 import Rang from './Rang';
 import Radio from './Radio';
 import Nowdoc from './Nowdoc';
-import {Button} from 'semantic-ui-react';
 
 class Titul extends Component
 {
@@ -25,7 +24,6 @@ class Titul extends Component
     return(
         <div>
             <div className = "choosing">
-                <Button>Jnvtyf</Button>
             <b>Выберите документ, с которым хотите работать: </b>
             {com}
             </div>

@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './style.css';
-import Button from './Button';
+import {Button} from 'semantic-ui-react';
 
 class Rang extends Component{
     constructor (props){
@@ -16,15 +16,15 @@ class Rang extends Component{
     render(){
         let component = null;
         if (this.state.selected===1&&this.state.url==='/otchet')
-            component =<Button name={'Сохранить'} />
+            component =<div><Button>Сохранить</Button><Button>Предварительный просмотр</Button></div>
         if (this.state.selected===1&&this.state.url==='/titul')
-        component =<Button name={'Заполнить'} />
+            component =<div><Button>Заполнить</Button><Button>Предварительный просмотр</Button></div>
         return(
            <div >
            <div className = "choosing">
            <b>Выберите курс: </b>
             <form>
-                <p><input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>1 
+                <p><input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>1
                 <input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>2</p>
                 <p><input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>3
                 <input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>4</p>

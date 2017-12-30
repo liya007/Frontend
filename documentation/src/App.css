@@ -125,11 +125,10 @@ a{
   color: white;
 }
 
-p{
-  -webkit-margin-before: 0.3em;
-  -webkit-margin-after: 0.3em;
+.pp
+{
+  margin-bottom: 0.3em;
 }
-
 .App-footer{
   background-color: #222;
   text-align: center;

@@ -6,9 +6,9 @@ const MyFooter=() =>
 (
   <div>
       <footer className = "App-footer">
-      <p>Orlov&Others, Inc.</p>
-      <p>+7 962 059 01 61</p>
-      <p>MaxCrasher@mail.ru</p>
+      <p className = "pp">Orlov&Others, Inc.</p>
+      <p className = "pp">+7 962 059 01 61</p>
+      <p className = "pp">MaxCrasher@mail.ru</p>
     </footer>
    </div>
   

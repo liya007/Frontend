@@ -26,10 +26,7 @@ export default class  ChoosingActivity extends React.Component{
         this.setState({radioButton: 'D'});
     }
 
-
-
     render(){
-
         let p = null;
         if (this.state.radioButton === 'L'){
             p = <ModalLoading/>
@@ -49,7 +46,6 @@ export default class  ChoosingActivity extends React.Component{
                 }
             }
       }
-
         return(
           <div>
               <hr />
@@ -63,19 +59,9 @@ export default class  ChoosingActivity extends React.Component{
                         <p><input type = "radio" name = "activity" value = "Deliting"
                             onClick ={this.ChoosenD}/>Удалить</p>
                     </form>
-                   
                 </div>
                 {p} {/*подгружаемая компонента*/}
           </div>
-         
-          
-         
-        );
-
-        
+        );   
     }
-
 }
-
-
-
