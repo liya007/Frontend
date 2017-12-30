@@ -45,7 +45,7 @@ export default class  ChoosingActivity extends React.Component{
                     p = <p>the state is "Deleting"</p>
                 }
                 else{
-                    p = <p>the state is "Bullshit"</p>
+                    p = <p>the state is "nothing"</p>
                 }
             }
       }
