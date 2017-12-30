@@ -25,8 +25,9 @@ class Titul extends Component
         <div>
             <div className = "choosing">
             <b>Выберите документ, с которым хотите работать: </b>
-            {com}
+           
             </div>
+            {com}
         </div> 
     );
 }
