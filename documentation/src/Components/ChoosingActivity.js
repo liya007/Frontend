@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
 import './Choosing.css';
 import ModalLoading from './ModalLoading';
 
@@ -32,16 +31,16 @@ export default class  ChoosingActivity extends React.Component{
     render(){
 
         let p = null;
-        if (this.state.radioButton == 'L'){
+        if (this.state.radioButton === 'L'){
             p = <ModalLoading/>
         }
         else {
-            if (this.state.radioButton == 'E')
+            if (this.state.radioButton === 'E')
             {
                 p = <p>the state is "Editing"</p>
             }
             else {
-                if (this.state.radioButton == 'D')
+                if (this.state.radioButton === 'D')
                 {
                     p = <p>the state is "Deleting"</p>
                 }

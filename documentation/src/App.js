@@ -4,18 +4,18 @@ import MyHeader from './Components/MyHeader';
 import MainPage from './Components/mainPage';
 import MyFooter from './Components/MyFooter';
 import Titul from './Components/Student/Titul';
-import ChoosingDocument from './Components/ChoosingDocument';
+//import ChoosingDocument from './Components/ChoosingDocument';
 
 import { BrowserRouter as Router,
-  Route,
-  Link,
-  Switch} from 'react-router-dom';
+  Route
+} from 'react-router-dom';
 
 import './App.css';
 
 class App extends Component {
 
   render() {
+    console.log("+");
     return (
 
      <Router>
@@ -23,9 +23,9 @@ class App extends Component {
 
        <Route path="/" component={MyHeader}/>
        <Route exact path="/" component={MainPage}/>
-       <Route path="/choosing" component={ChoosingDocument}/>
-       <Route path = "/titul" component= {Titul} />
-       <Route path = "/otchet" component= {Titul} />
+       <Route exact path ="/choosing" component={Titul}/>
+       <Route exact path = "/titul" component= {Titul}/>
+       <Route exact path = "/otchet" component= {Titul}/>
        {//<Route path = "/gost" component= {}/>
        }
        <Route path="/" component={MyFooter}/>

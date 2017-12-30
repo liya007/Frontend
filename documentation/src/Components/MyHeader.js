@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './Logo2.bmp';
 import '../App.css';
-import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 class MyHeader extends React.Component{
 

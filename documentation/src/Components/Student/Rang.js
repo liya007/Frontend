@@ -15,9 +15,9 @@ class Rang extends Component{
     }
     render(){
         let component = null;
-        if (this.state.selected==1&&this.state.url=='/otchet')
+        if (this.state.selected===1&&this.state.url==='/otchet')
             component =<Button name={'Сохранить'} />
-        if (this.state.selected==1&&this.state.url=='/titul')
+        if (this.state.selected===1&&this.state.url==='/titul')
         component =<Button name={'Заполнить'} />
         return(
            <div >
@@ -31,10 +31,9 @@ class Rang extends Component{
                 <p><input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>5
                 <input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>6</p>
                 <hr width ="50%" align = "left"/>
-
             </form>
            </div>
-            {component};
+            {component}
             </div>
         );}
 }
