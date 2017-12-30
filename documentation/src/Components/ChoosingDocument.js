@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,  Link} from 'react-router-dom';
 import ChoosingActivity from './ChoosingActivity';
+import ChoosingActivityGOST from './ChoosingActivityGOST';
 import './Choosing.css';
 
  export default class ChoosingDocument extends React.Component
@@ -10,6 +11,7 @@ import './Choosing.css';
         super(props);
         this.newState=this.newState.bind(this); //// ЧТО ЭТО ТАКОЕ И ПОЧЕМУ ОНО ТАК ДЕЛАЕТСЯ
         this.newState2=this.newState2.bind(this); //// ЧТО ЭТО ТАКОЕ И ПОЧЕМУ ОНО ТАК ДЕЛАЕТСЯ
+        this.newState3=this.newState3.bind(this);
         this.state={selected : 0}
     }
 
@@ -20,13 +22,19 @@ import './Choosing.css';
     newState2 (){
         this.setState({selected:2})
     }
+
+    newState3 (){
+        this.setState({selected:3})
+    }
     
 
      render (){
 
         let component = null;
 
-        if (this.state.selected===1){
+      
+
+       if (this.state.selected===1){
             component=<ChoosingActivity/>
         }
         else{
@@ -38,6 +46,14 @@ import './Choosing.css';
                     <p>ЗДЕСЬ ПОТОМ БУДЕТ КОМПОНЕНТА ДЛЯ ВЫВОДА ВСЕХ ИМЕЮЩИХСЯ ДОКУМЕНТОВ</p>
                 </div>
                 
+            }
+            else
+            {
+                if (this.state.selected===3)
+                {
+                    component=<ChoosingActivityGOST/>
+                }
+               
             }
         }
         /*this.state.selected ? component = <ChoosingActivity/> : component=null;*/
@@ -53,7 +69,7 @@ import './Choosing.css';
                         <p><input type = "radio" name = "document" value = "reports"
                         onClick={this.newState}    />Структуры отчетов и пояснительных записок</p>
                         <p><input type = "radio" name = "document" value = "standards"
-                        onClick={this.newState}    />ГОСТы</p>
+                        onClick={this.newState3}    />ГОСТы</p>
                         <hr width ="50%" align = "left"/>
                     <b>Или, быть может, Вы хотели бы: </b>
                         <p><input type = "radio" name = "document" value = "allDocuments"

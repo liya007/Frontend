@@ -6,10 +6,6 @@
     height: 500px;
 }
 
-.show-grid{
-    padding: 5px;
-    border: 1px solid black;
-}
 .show-grid1
     {height: 70px;
     padding-left: 20px;
@@ -17,4 +13,8 @@
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
+}
+
+.positionOfButton{
+    text-align: right;
 }

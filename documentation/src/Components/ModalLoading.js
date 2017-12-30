@@ -1,7 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
-import List from 'material-ui'; // ????????????????????????????????
-import {Grid, Row, Col} from 'react-bootstrap';
+//import {Grid, Row, Col, Button} from 'react-bootstrap';
+import { Grid, Button, Label, Input} from 'semantic-ui-react'
+
+
 
 
 const customStyles = {
@@ -57,23 +59,50 @@ export default class ModalLoading extends React.Component{
                 contentLabel="Example Modal"
                 >
         
-                <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+                <h2 ref={subtitle => this.subtitle = subtitle}>Добавление документа</h2>
                 <div>
-                <Grid>
-                <Row className="show-grid1">
-                 <Col>1 строка, 1 колонка </Col>
-                 <Col>1 строка, 2 колонка </Col>
-                </Row>
-                <Row className="show-grid1">
-                <Col md={6} mdPush={6}><code>&lt;{'Col md={6} mdPush={6}'} /&gt;</code></Col>
-                <Col md={6} mdPull={6}><code>&lt;{'Col md={6} mdPull={6}'} /&gt;</code></Col>
-              </Row>
-              </Grid>
+                    <Grid columns = "two" devided>
+                        <Grid.Row>
+                            <Grid.Column>
+                                <label>Название</label>
+                            </Grid.Column>
+                            <Grid.Column>
+                            <Input />
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column >
+                            <label>Загрузить документ</label>
+                            </Grid.Column>
+                            <Grid.Column>
+                                <input type = "file" name ="file" size = "50"/>
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column className="positionOfButton"> <Button>Загрузить</Button></Grid.Column>
+                            <Grid.Column> <Button>Отмена</Button></Grid.Column>
+                        </Grid.Row>
+                    </Grid>
                 </div>
-                <button onClick={this.closeModal}>Отмена</button>
-                <button onClick={this.closeModal}>Загрузить</button>
+                
+                
             </Modal>
         </div>
         );
     }
 }
+
+{/* <Grid>
+                    <Row>
+                        <Col>1 строка, 1 колонка </Col>
+                        <Col>1 строка, 2 колонка </Col>
+                    </Row>
+                    <Row >
+                        <Col md={6} mdPush={6}>'Col md={6} mdPush={6}'</Col>
+                        <Col md={6} mdPull={6}>'Col md={6} mdPull={6}'</Col>
+                    </Row>
+                    <Row >
+                        <Col md={6} mdPush={6}><Button bsStyle="default" style={{color:"black"}} onClick={this.closeModal}>Отмена</Button></Col>
+                        <Col md={6} mdPull={6}><Button bsStyle="default" style={{color:"black"}} onClick={this.closeModal}>Загрузить</Button></Col>
+                    </Row>
+              </Grid>*/}
