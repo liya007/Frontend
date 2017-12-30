@@ -25,10 +25,10 @@ class Titul extends Component
     return(
         <div>
             <div className = "choosing">
-                <Button>Jnvtyf</Button>
             <b>Выберите документ, с которым хотите работать: </b>
-            {com}
+           
             </div>
+            {com}
         </div> 
     );
 }

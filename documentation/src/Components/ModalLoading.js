@@ -1,10 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-//import {Grid, Row, Col, Button} from 'react-bootstrap';
 import { Grid, Button, Label, Input} from 'semantic-ui-react'
-
-
-
 
 const customStyles = {
     content : {
@@ -15,10 +11,7 @@ const customStyles = {
       marginRight           : '-50%',
       transform             : 'translate(-50%, -50%)'
     }
-};
-
-const dummySentences = ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'Donec hendrerit tempor tellus.', 'Donec pretium posuere tellus.', 'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'Nulla posuere.', 'Donec vitae dolor.', 'Nullam tristique diam non turpis.', 'Cras placerat accumsan nulla.', 'Nullam rutrum.', 'Nam vestibulum accumsan nisl.'];
-
+  };
 export default class ModalLoading extends React.Component{
 
     constructor(){
