@@ -4,6 +4,7 @@ import MyHeader from './Components/MyHeader';
 import MainPage from './Components/mainPage';
 import MyFooter from './Components/MyFooter';
 import Titul from './Components/Student/Titul';
+import Gost from './Components/Student/Gost';
 //import ChoosingDocument from './Components/ChoosingDocument';
 
 
@@ -27,8 +28,8 @@ class App extends Component {
        <Route exact path ="/choosing" component={Titul}/>
        <Route exact path = "/titul" component= {Titul}/>
        <Route exact path = "/otchet" component= {Titul}/>
-       {//<Route path = "/gost" component= {}/>
-       }
+       <Route path = "/gost" component= {Gost}/>
+       
        <Route path="/" component={MyFooter}/>
        </div>
      </Router>

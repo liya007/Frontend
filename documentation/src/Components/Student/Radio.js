@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Rang from './Rang';
-import Nowdoc from './Nowdoc';
 import './style.css';
 import ChoosingActivity from '../ChoosingActivity';
 
@@ -45,7 +44,6 @@ class Radio extends Component {
 
     return(
         <div className = "choosing">
-        <b>Выберите документ, с которым хотите работать: </b>
             <p><input type = "radio" name = "document" value = "frontRages"
                 onClick={this.newState}   />{this.props.mas[0]}</p>
             <p><input type = "radio" name = "document" value = "reports"
