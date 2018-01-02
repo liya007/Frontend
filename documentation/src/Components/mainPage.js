@@ -17,19 +17,19 @@ class MainPage extends React.Component{
             <div className = "mainBody">
             <div className = "partOfBody">
             <Link to = "./titul" className= "Linkpos">
-                <span className = "span2" >Титул</span>
+                <span className = "span2" >Титульные листы</span>
             </Link>
             </div>
 
             <div className = "partOfBody">
             <Link to = "./otchet" className= "Linkpos">
-                <span className = "span2" >Отчеты</span>
+                <span className = "span2" >Структуры отчетов и пояснительных записок</span>
             </Link>
             </div>
 
             <div className = "partOfBody">
             <Link to = "/gost" className= "Linkpos">
-                <span className = "span2" >Госты</span>
+                <span className = "span2"  >ГОСТы</span>
             </Link>
             </div>            
             </div>

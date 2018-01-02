@@ -11,7 +11,8 @@ const Nowdoc=()=>(
             <p><input type = "radio" name = "document" value = "allDocuments"
             onClick={this.newState2}    />Показать все текущие документы</p>
         </div>
-    );}
+    );
+}
 }
 );
 export default Nowdoc;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { Grid, Button, Label, Input} from 'semantic-ui-react'
+import { Grid, Button, Label, Input, Dropdown} from 'semantic-ui-react'
 
 const customStyles = {
     content : {
@@ -12,7 +12,7 @@ const customStyles = {
       transform             : 'translate(-50%, -50%)'
     }
   };
-export default class ModalLoading extends React.Component{
+export default class ModalEditing extends React.Component{
 
     constructor(){
         super();
@@ -43,7 +43,7 @@ export default class ModalLoading extends React.Component{
     render(){
         return(
         <div>
-            <Button onClick={this.openModal}>Перейти к добавлению</Button>
+            <Button onClick={this.openModal}>Перейти к замене</Button>
             <Modal
                 isOpen={this.state.modalIsOpen}
                 onAfterOpen={this.afterOpenModal}
@@ -52,27 +52,27 @@ export default class ModalLoading extends React.Component{
                 contentLabel="Example Modal"
                 >
         
-                <h2 ref={subtitle => this.subtitle = subtitle}>Добавление документа</h2>
+                <h2 ref={subtitle => this.subtitle = subtitle}>Замена файла</h2>
                 <div>
                     <Grid columns = "two" devided>
                         <Grid.Row>
                             <Grid.Column className="positionOfLeftButton">
-                                <label>Название</label>
+                                <label>Название изменяемого документа</label>
                             </Grid.Column>
                             <Grid.Column>
-                            <Input />
+                                <Dropdown  placeholder = 'Документы'/>
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
-                            <Grid.Column className="positionOfLeftButton">
-                            <label>Загрузить документ</label>
+                            <Grid.Column className="positionOfLeftButton" >
+                            <label>Загрузить измененный документ</label>
                             </Grid.Column>
                             <Grid.Column>
-                                <input type = "file" name ="file" size = "50"/>
+                                <input type = "file" name ="editedFile" size = "50"/>
                             </Grid.Column>
                         </Grid.Row>
                         <Grid.Row>
-                            <Grid.Column className="positionOfLeftButton"> <Button onClick = {this.closeModal}>Загрузить</Button></Grid.Column>
+                            <Grid.Column className="positionOfLeftButton"> <Button onClick = {this.closeModal}>Заменить</Button></Grid.Column>
                             <Grid.Column> <Button onClick = {this.closeModal}>Отмена</Button></Grid.Column>
                         </Grid.Row>
                     </Grid>
@@ -84,4 +84,3 @@ export default class ModalLoading extends React.Component{
         );
     }
 }
-

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Rang from './Rang';
 import './style.css';
 import ChoosingActivity from '../ChoosingActivity';
+import AllDocuments from '../AllDocuments';
 
 class Radio extends Component {
 
@@ -22,38 +23,55 @@ class Radio extends Component {
     render(){
         let component2 = null;
         let component = null;
-        if (this.state.selected===1&&this.state.url!='/choosing'){// выбор курса
+        if (this.state.selected===1 && this.state.url!='/choosing'){// выбор курса
             component2=<Rang url = {this.state.url}/>
         }
         if (this.state.url==='/choosing'){
-            component = (<div><b>Или, быть может, Вы хотели бы: </b>
-                <p><input type = "radio" name = "document" value = "allDocuments"
-                onClick={this.newState2}    />Показать все текущие документы</p></div>)
+            component = (
+                <div className = "choosing">
+                <b>Или, быть может, Вы хотели бы: </b>
+                <p><input type = "radio" name = "document" value = "allDocuments"onClick={this.newState2}/>
+                Показать все текущие документы</p>
+                </div>)
         }
         if (this.state.selected===1&&this.state.url==='/choosing'){
-            component = (<div><b>Или, быть может, Вы хотели бы: </b>
+            component = (
+                <div>
+                     <div className = "choosing">
+                <b>Или, быть может, Вы хотели бы: </b>
                 <p><input type = "radio" name = "document" value = "allDocuments"
-                onClick={this.newState2}    />Показать все текущие документы</p><ChoosingActivity/></div>)    
+                onClick={this.newState2}    />
+                Показать все текущие документы</p>
+                </div>
+                <ChoosingActivity/>
+                </div>
+           )    
         }
         if(this.state.selected===2)
         {
-            component = <div><hr/>
-            <p>ЗДЕСЬ ПОТОМ БУДЕТ КОМПОНЕНТА ДЛЯ ВЫВОДА ВСЕХ ИМЕЮЩИХСЯ ДОКУМЕНТОВ</p>
+            component = <div className = "choosing" ><hr/>
+            <AllDocuments/>
             </div>
         }
 
     return(
-        <div className = "choosing">
+        <div>
+            <div className = "choosing">
+
             <p><input type = "radio" name = "document" value = "frontRages"
                 onClick={this.newState}   />{this.props.mas[0]}</p>
             <p><input type = "radio" name = "document" value = "reports"
                 onClick={this.newState}    />{this.props.mas[1]}</p>
             <p><input type = "radio" name = "document" value = "standards"
                 onClick={this.newState}    />{this.props.mas[2]}</p>
-                {component}
-            <hr width ="50%" align = "left"/>
+              
+           
+           
+            </div>
+            {component }
             {component2}
-    </div>
+        </div>
+       
         );
     }
 }

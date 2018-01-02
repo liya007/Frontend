@@ -15,6 +15,12 @@
     vertical-align: middle;
 }
 
-.positionOfButton{
+.positionOfLeftButton{
     text-align: right;
+}
+.positionOfRightButton{
+    text-align: left;
+}
+h2{
+    text-align: center;
 }
