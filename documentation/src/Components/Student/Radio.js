@@ -37,12 +37,10 @@ class Radio extends Component {
         if (this.state.selected===1&&this.state.url==='/choosing'){
             component = (
                 <div>
-                     <div className = "choosing">
                 <b>Или, быть может, Вы хотели бы: </b>
                 <p><input type = "radio" name = "document" value = "allDocuments"
                 onClick={this.newState2}    />
                 Показать все текущие документы</p>
-                </div>
                 <ChoosingActivity/>
                 </div>
            )    
@@ -55,19 +53,13 @@ class Radio extends Component {
         }
 
     return(
-        <div>
-            <div className = "choosing">
-
+        <div className = "choosing">
             <p><input type = "radio" name = "document" value = "frontRages"
                 onClick={this.newState}   />{this.props.mas[0]}</p>
             <p><input type = "radio" name = "document" value = "reports"
                 onClick={this.newState}    />{this.props.mas[1]}</p>
             <p><input type = "radio" name = "document" value = "standards"
                 onClick={this.newState}    />{this.props.mas[2]}</p>
-              
-           
-           
-            </div>
             {component }
             {component2}
         </div>

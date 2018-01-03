@@ -21,7 +21,7 @@ class Rang extends Component{
             component =<div><Button>Заполнить</Button><Button>Предварительный просмотр</Button></div>
         return(
            <div >
-           <div className = "choosing">
+               <div>
            <b>Выберите курс: </b>
             <form>
                 <p><input type = "radio" name = "document2" value = "frontRages" onClick={this.newState}/>1

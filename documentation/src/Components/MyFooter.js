@@ -4,8 +4,8 @@ import '../App.css';
 
 const MyFooter=() => 
 (
-  <div>
-      <footer className = "App-footer">
+  <div className = "App-footer">
+      <footer >
       <p className = "pp">Orlov&Others, Inc.</p>
       <p className = "pp">+7 962 059 01 61</p>
       <p className = "pp">MaxCrasher@mail.ru</p>

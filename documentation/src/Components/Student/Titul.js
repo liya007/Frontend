@@ -22,11 +22,8 @@ class Titul extends Component
         if (this.props.match.path=='/titul'||this.props.match.path=='/otchet'||this.props.match.path=='gost') // для студ
             com=<Radio url = {this.props.match.path} mas = {mas} /> 
     return(
-        <div>
-            <div className = "choosing">
+        <div className = 'mainBody'>
             <b>Выберите документ, с которым хотите работать: </b>
-           
-            </div>
             {com}
         </div> 
     );
