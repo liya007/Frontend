@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import './style.css';
+import TableDocum from './TableDocum';
 import {Button} from 'semantic-ui-react';
 
 class Rang extends Component{
@@ -16,9 +17,9 @@ class Rang extends Component{
     render(){
         let component = null;
         if (this.state.selected===1&&this.state.url==='/otchet')
-            component =<div><Button>Сохранить</Button><Button>Предварительный просмотр</Button></div>
+            component =<div><TableDocum/><Button>Сохранить</Button><Button>Предварительный просмотр</Button></div>
         if (this.state.selected===1&&this.state.url==='/titul')
-            component =<div><Button>Заполнить</Button><Button>Предварительный просмотр</Button></div>
+            component =<div><TableDocum/><Button>Заполнить</Button><Button>Предварительный просмотр</Button></div>
         return(
            <div >
                <div>
