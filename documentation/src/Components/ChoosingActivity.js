@@ -50,7 +50,6 @@ export default class  ChoosingActivity extends React.Component{
       }
         return(
           <div>
-                    <div className = "mainBody">
                     <b>Выберите действие: </b>
                     <form>
                         <p><input type = "radio" name = "activity"  value = "Loading"
@@ -59,8 +58,8 @@ export default class  ChoosingActivity extends React.Component{
                             onClick ={this.ChoosenE}/>Заменить</p>
                         <p><input type = "radio" name = "activity" value = "Deliting"
                             onClick ={this.ChoosenD}/>Удалить</p>
+                            <hr width ="50%" align = "left"/>
                     </form>
-                    </div>
                 {p} {/*подгружаемая компонента*/}
           </div>
         );   
